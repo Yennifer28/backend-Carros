@@ -28,9 +28,34 @@ const createUsuario = async (req, res) => {
       success: false,
       message: error.message
     });
-  }
-}
+  };
+};
+
+const getUsuarioByCorreo = async (req, res) => {
+  handleValidationErrors(req);
+
+  try{
+    const correo = req.params.correo;
+    const usuario = usuarioService.getUsuarioByCorreo(correo);
+    if(!usuario){
+      res.status(404).json({
+        success: false,
+        message: 'Empleado no encontrado'
+      });
+    }
+    res.status(201).json({
+      success:true,
+      usuario
+    });
+  } catch (error){
+    res.status(400).json({
+      success:false,
+      message: error.message
+    });
+  };
+};
 
 export {
-  createUsuario
+  createUsuario,
+  getUsuarioByCorreo
 };
