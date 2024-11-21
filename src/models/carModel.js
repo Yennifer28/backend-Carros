@@ -1,6 +1,6 @@
 class CarModel {
 
-    constructor (id,nombre,categoria,capacidad_tanque,transmision,pasajeros,precio,rating,descripcion)
+    constructor (id,nombre,categoria,capacidad_tanque,transmision,pasajeros,precio,rating,descripcion,istaken)
     {
       this.id=id
       this.nombre = nombre
@@ -11,6 +11,7 @@ class CarModel {
       this.precio = precio
       this.rating = rating
       this.descripcion = descripcion
+      this.istaken  = istaken
 
 
     }

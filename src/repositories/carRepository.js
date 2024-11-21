@@ -1,4 +1,4 @@
-import  db from '../config/fireabase.js'
+import  db from '../config/firebase.js'
 import CarModel from '../models/carModel.js'
 
 class CarRepository {
@@ -14,6 +14,7 @@ class CarRepository {
         precio : data.precio,
         rating : data.rating,
         descripcion : data.descripcion,
+        istaken : data.istaken
     })
 
     return car.id
@@ -34,9 +35,10 @@ class CarRepository {
           data.precio,
           data.rating,
           data.descripcion,
-      
+         data.istaken
         ))
     });
+    return cars
   }
 
   async getCarById(id){
@@ -57,6 +59,8 @@ class CarRepository {
         data.precio,
         data.rating,
         data.descripcion,
+        data.istaken
+        
     
       )
     

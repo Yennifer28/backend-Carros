@@ -1,13 +1,9 @@
-import bcrypt from 'bcrypt'
-import jwt from 'jsonwebtoken'
-import fs from 'fs'
-import path from 'path'
+
 import CarRepository from '../repositories/carRepository.js'
 import CarModel from '../models/carModel.js'
 
 const carRepository = new CarRepository ()
-const secret = process.env.JWT_SECRET
-const saltround =10
+
 
 
 class CarService {
@@ -23,7 +19,8 @@ class CarService {
         data.precio,
         data.rating,
         data.descripcion,
-    
+        data.istaken
+
       )
       const carID = await carRepository.addCar(newCar)
       return carID
