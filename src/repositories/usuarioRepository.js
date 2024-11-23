@@ -7,7 +7,8 @@ class UsuarioRepository {
       nombre:data.nombre,
       apellido:data.apellido,
       correo:data.correo,
-      contrasena:data.contrasena
+      contrasena:data.contrasena,
+      rol : data.rol
     })
     return usuario.id;
   }
@@ -26,7 +27,8 @@ class UsuarioRepository {
       data.nombre,
       data.apellido,
       data.correo,
-      data.contrasena
+      data.contrasena,
+      data.rol
     )
   }
 }

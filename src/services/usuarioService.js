@@ -22,7 +22,9 @@ class UsuarioService {
       data.nombre,
       data.apellido,
       data.correo,
-      hashedPass
+      hashedPass,
+      data.rol
+      
     )
     const usuarioID = await usuarioRepository.createUsuario(newUsuario);
     return usuarioID;

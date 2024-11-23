@@ -40,7 +40,8 @@ export const login = async (req, res) => {
   );
   return res.json({ 
     token,
-    userId: user.id 
+    userId: user.id ,
+    userRol :user.rol
   });
   } catch(error){
     return res.status(500).json({

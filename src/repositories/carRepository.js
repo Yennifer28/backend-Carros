@@ -42,7 +42,7 @@ class CarRepository {
   }
 
   async getCarById(id){
-    const doc =await db.collection('cars').doc(id).get
+    const doc =await db.collection('cars').doc(id).get()
     if(!doc.exists){
       return null
     }
