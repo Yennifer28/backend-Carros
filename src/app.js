@@ -16,7 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(rateLimitMiddleware);
 app.use(cors(corsOptions));
-app.use('/api/v1', routes);
+app.use('/api', routes);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3020;

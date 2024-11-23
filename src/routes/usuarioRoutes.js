@@ -19,7 +19,7 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({
         error: true,
-        message: 'Errores de validación',
+        message: 'Errores de validacion',
         errors: errors.array(),
       });
     }
