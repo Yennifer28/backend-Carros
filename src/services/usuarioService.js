@@ -33,6 +33,10 @@ class UsuarioService {
   async getUsuarioByCorreo(correo){
     return await usuarioRepository.getUsuarioByCorreo(correo);
   }
+
+  async getAllUsers(){
+    return await usuarioRepository.getAllUsers();
+  }
 }
 
 export default UsuarioService;

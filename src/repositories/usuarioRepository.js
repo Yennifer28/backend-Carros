@@ -31,6 +31,25 @@ class UsuarioRepository {
       data.rol
     )
   }
+
+  async getAllUsers(){
+    const docs = await db.collection('usuarios').get()
+    const usuarios = [] 
+    docs.forEach((doc) => {
+      const data = doc.data()
+        usuarios.push(new UsuarioModel (
+          doc.id,
+          data.nombre,
+          data.apellido,
+          data.correo,
+          data.contrasena,
+          data.rol,
+        ))
+    });
+    return usuarios
+  }
 }
+
+
 
 export default UsuarioRepository;

@@ -1,7 +1,9 @@
 import express from 'express';
+import authMiddleware from '../middlewares/authMiddleware.js'
 import { check, validationResult } from 'express-validator';
 import {
   createUsuario,
+  getAllUsers,
 } from '../controllers/usuarioController.js';
 
 const router = express.Router();
@@ -26,5 +28,7 @@ router.post(
     await createUsuario(req, res);
   }
 );
+
+router.get('/',authMiddleware, getAllUsers);
 
 export default router;

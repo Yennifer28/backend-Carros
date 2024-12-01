@@ -40,7 +40,21 @@ const getUsuarioByCorreo = async (req, res) => {
   };
 };
 
+const getAllUsers = async (request,response) =>{
+  try {
+    const usuarios = await usuarioService.getAllUsers();
+    return response.status(200).json({success : true , usuarios})
+}catch (error) {
+      return response.status(400).json({
+          success:false,
+          message: error.message
+
+      })
+    }
+}
+
 export {
   createUsuario,
-  getUsuarioByCorreo
+  getUsuarioByCorreo,
+  getAllUsers
 };
