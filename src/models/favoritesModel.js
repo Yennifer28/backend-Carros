@@ -1,7 +1,8 @@
 class FavoritesModel {
 
-  constructor (idusuario,idcar)
+  constructor (id,idusuario,idcar)
   {
+    this.id = id
     this.idusuario = idusuario
     this.idcar = idcar
   }
