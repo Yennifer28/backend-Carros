@@ -7,7 +7,8 @@ class ReviewRepository {
       idCar: data.idCar,
       idUser: data.idUser,
       description: data.description,
-      rate: data.rate
+      rate: data.rate,
+      date_review: data.date_review
     })
     return review.id
   }
@@ -22,7 +23,8 @@ class ReviewRepository {
         data.idCar,
         data.idUser,
         data.description,
-        data.rate
+        data.rate,
+        data.date_review,
       ))
     })
     return reviews
@@ -39,7 +41,8 @@ class ReviewRepository {
       data.idCar,
       data.idUser,
       data.description,
-      data.rate
+      data.rate,
+      data.date_review,
     )
   }
 

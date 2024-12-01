@@ -60,10 +60,7 @@ class CarRepository {
         data.rating,
         data.descripcion,
         data.istaken
-        
-    
       )
-    
   }
 
   async updateCar(id,data){

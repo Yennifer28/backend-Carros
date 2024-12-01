@@ -9,7 +9,8 @@ class ReviewService {
       data.idCar,
       data.idUser,
       data.description,
-      data.rate
+      data.rate,
+      data.date_review
     )
     const reviewId = await reviewRepository.addReview(newReview)
     return reviewId
