@@ -12,7 +12,11 @@ const router = express.Router()
 
 // Rutas para el modelo Favorites
 router.post('/create', authMiddleware,addFavorite)
-router.get('/', authMiddleware,getAllFavorites)
-router.delete('/delete/:id', authMiddleware,deleteFavorite)
+router.get('/', 
+  //authMiddleware,
+  getAllFavorites)
+router.delete('/delete/:id', 
+  //authMiddleware,
+  deleteFavorite)
 
 export default router

@@ -5,6 +5,7 @@ const favoritesRepository = new FavoritesRepository()
 class FavoritesService {
   async addFavorite(data) {
     const newFavorite = new FavoritesModel(
+      null,
       data.idusuario,
       data.idcar
     )
